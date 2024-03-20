@@ -1,0 +1,82 @@
+<header class="page-header {{ include.class }}">
+
+	<div class="page-header-banner">
+		<div class="page-header-brand">
+			<h1 class="page-header-title">iTowns</h1>
+			<h2 class="page-header-subtitle">Visualising 3D geospatial data</h2>
+		</div>
+
+		<div class="page-header-tools">
+			<a	class="link page-header-link page-header-tools-link"
+	  			href="{{ site.baseurl }}/page-not-ready"
+	  			title="News page">
+				News
+			</a>
+			<a	class="link page-header-link page-header-tools-link"
+	   			href="{{ site.baseurl }}/page-not-ready"
+	   			title="Contact page">
+				Contact
+			</a>
+			<a	class="link page-header-link page-header-tools-link"
+	  			href="https://github.com/iTowns/itowns"
+	  			target="_blank"
+	  			title="GitHub page"
+				style="--after-image:
+					url('{{ site.baseurl }}/assets/icons/github.svg')">
+				GitHub
+			</a>
+		</div>
+
+		<button class="page-header-button burger-button"
+		  		id="header-open-menu-button">
+			<img src="{{ site.baseurl }}/assets/icons/burger.svg">
+			<img src="{{ site.baseurl }}/assets/icons/burger.svg">
+			<img src="{{ site.baseurl }}/assets/icons/burger.svg">
+		</button>
+	</div>
+
+
+	<div 	class="page-header-menu"
+	  		id="header-hidable-menu">
+
+		<button class="page-header-button close-button"
+		  		id="header-close-menu-button">
+			<img src="{{ site.baseurl }}/assets/icons/cross.svg">
+			Fermer
+		</button>
+
+		<div class="page-header-tools">
+			<a	class="link page-header-link page-header-tools-link"
+	  			href="{{ site.baseurl }}/page-not-ready"
+	  			title="News page">
+				News
+			</a>
+			<a	class="link page-header-link page-header-tools-link"
+	   			href="{{ site.baseurl }}/page-not-ready"
+	   			title="Contact page">
+				Contact
+			</a>
+			<a	class="link page-header-link page-header-tools-link"
+	  			href="https://github.com/iTowns/itowns"
+	  			target="_blank"
+	  			title="GitHub page"
+				style="--after-image:
+					url('{{ site.baseurl }}/assets/icons/github.svg')">
+				GitHub
+			</a>
+		</div>
+
+		<nav class="page-header-navigation">
+			{% for item in site.data.navigation %}
+			<a	class="link page-header-link page-header-navigation-link
+					{% if page.url == item.link %}current-page{% endif %}"
+	  			href="{{ site.baseurl }}{{ item.link }}"
+				title="{{ item.name }}">
+				{{ item.name }}
+			</a>
+			{% endfor %}
+		</nav>
+	</div>
+
+</header>
+

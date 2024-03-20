@@ -1,0 +1,96 @@
+.tab-section-description.license-description {
+	margin: 0;
+}
+
+.tab-section-description.license-description.itowns-license:not(:first-of-type) {
+	margin-top: -8px;
+}
+
+.license-link {
+	align-items: center;
+	display: flex;
+	gap: 8px;
+
+	color: var(--color-blue);
+	text-underline-offset: 4px;
+}
+
+.license-link::after {
+	height: 20px;
+	width: 20px;
+
+	content: "";
+	background-image: var(--after-image);
+	background-size: 20px 20px;
+
+	display: flex;
+
+	filter: var(--svg-filter-blue);
+}
+
+.third-party-list-wrapper {
+	padding: 0 40px;
+	padding-top: 18px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.third-party-wrapper {
+	padding-bottom: 24px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.third-party-wrapper:not(:last-child) {
+	border-bottom: 1px solid var(--color-blue);
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/* -------------------- Responsivity ---------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+
+
+
+/* -------------------- Tablet layout --------------------------------------- */
+
+@media (max-width: 1200px) {
+
+
+	.itowns-license-cards-wrapper {
+		flex-direction: row;
+	}
+
+	.third-party-list-wrapper {
+		padding: 0 16px;
+	}
+
+
+}
+
+
+
+
+/* -------------------- Mobile layout --------------------------------------- */
+
+@media (max-width: 750px) {
+
+
+	.itowns-license-cards-wrapper {
+		flex-direction: column;
+	}
+
+	.third-party-list-wrapper {
+		padding: 0;
+	}
+
+
+}
+

@@ -1,0 +1,103 @@
+- title: Currently in development
+  anchor: current-development
+  cards:
+
+    - title: 3D tiles
+      text:
+        - paragraph: Complete support of the 3D Tiles Specification 1.1.
+      link:
+        target: page-not-ready
+        text: Github issue
+        icon: /assets/icons/github.svg
+
+    - title: COPC
+      text:
+        - paragraph:  Support of the Cloud Optimized Point Cloud Specification
+                      (COPC).
+      link:
+        target: page-not-ready
+        text: Github issue
+        icon: /assets/icons/github.svg
+
+    - title: Point cloud
+      text:
+        - paragraph:  Optimization of the point cloud engine.
+      link:
+        target: page-not-ready
+        text: Github issue
+        icon: /assets/icons/github.svg
+
+    - title: Eye-Dome-Lighting
+      text:
+        - paragraph:  Support of Eye-Dome-Lighting shading for point clouds.
+      link:
+        target: page-not-ready
+        text: Github issue
+        icon: /assets/icons/github.svg
+
+    - title: Packaging
+      text:
+        - paragraph:  Modularity of the sub-components of iTowns
+      link:
+        target: page-not-ready
+        text: Github issue
+        icon: /assets/icons/github.svg
+
+
+
+
+- title: Under consideration
+  anchor: under-consideration
+  cards:
+
+    - title: Multiple Coordinate Reference System
+      link:
+        target: page-not-ready
+        text: upvote
+        icon: /assets/icons/github.svg
+
+    - title: Performance
+      link:
+        target: page-not-ready
+        text: upvote
+        icon: /assets/icons/github.svg
+
+    - title: Virtual & augmented reality
+      link:
+        target: page-not-ready
+        text: upvote
+        icon: /assets/icons/github.svg
+
+    - title: Integration of oriented imagery
+      link:
+        target: page-not-ready
+        text: upvote
+        icon: /assets/icons/github.svg
+
+    - title: WebGPU
+      link:
+        target: page-not-ready
+        text: upvote
+        icon: /assets/icons/github.svg
+
+    - title: Standalone desktop application
+      link:
+        target: page-not-ready
+        text: upvote
+        icon: /assets/icons/github.svg
+
+    - title: Commonly used format
+      text:
+        - paragraph:  Support of commonly used format (geotiff, Mapbox RGB) for
+                      elevation data
+      link:
+        target: page-not-ready
+        text: Github issue
+        icon: /assets/icons/github.svg
+
+    - title: Mobile support
+      link:
+        target: page-not-ready
+        text: upvote
+        icon: /assets/icons/github.svg
+

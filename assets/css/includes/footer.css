@@ -1,0 +1,110 @@
+/* -------------------- Footer generalities --------------------------------- */
+
+.page-footer {
+	border-top: 1px solid var(--color-blue);
+	color: var(--color-white);
+}
+
+.page-footer.home-page {
+	border-top: none;
+}
+
+
+
+
+/* -------------------- Partnerships ---------------------------------------- */
+
+.page-footer-partnerships-wrapper {
+	padding: 16px var(--horizontal-padding-desktop);
+
+	background-color: #FFFFFF;
+
+	align-items: center;
+	display: flex;
+	gap: 31px;
+}
+
+.page-footer-partnership {
+	flex: 0 1 auto;
+}
+
+.page-footer-partnership img {
+	max-width: 100%;
+}
+
+
+
+
+/* -------------------- Footer links ---------------------------------------- */
+
+.page-footer-links-wrapper {
+	padding: 16px var(--horizontal-padding-desktop);
+
+	background-color: var(--color-blue);
+
+	align-items: center;
+	display: flex;
+	gap: 24px;
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/* -------------------- Responsivity ---------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+
+
+
+@media (max-width: 1200px) {
+
+
+	.page-footer-partnerships-wrapper {
+		padding: 16px var(--horizontal-padding-tablet);
+	}
+
+	.page-footer-links-wrapper {
+		padding: 16px var(--horizontal-padding-tablet);
+	}
+
+
+}
+
+
+
+
+/* -------------------- Tablet layout --------------------------------------- */
+
+@media (max-width: 1100px) {
+
+
+	.page-footer.home-page {
+		margin-top: 80px;
+	}
+
+	.page-footer-partnerships-wrapper {
+		justify-content: center;
+	}
+
+	.page-footer-links-wrapper {
+		justify-content: center;
+	}
+
+
+}
+
+
+
+
+/* -------------------- Mobile layout --------------------------------------- */
+
+@media (max-width: 750px) {
+
+
+	.page-footer-links-wrapper {
+		flex-direction: column;
+	}
+
+
+}

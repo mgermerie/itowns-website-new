@@ -1,0 +1,37 @@
+<h2 class="tab-section-title"
+	{% if include.content.icon %}
+		style="--before-image:
+			url('{{ site.baseurl }}/{{ include.content.icon }}')"
+	{% endif %}
+>
+	{{ include.content.title }}
+</h2>
+
+<div class="organisation-chart">
+
+	<div class="contributors-wrapper">
+		{% for item in include.content.contributors %}
+			<div class="contributor">
+				<a 	class="contributor-link"
+					href="https://github.com/{{ item.user-name }}"
+					target="_blank"
+					title="Go to {{ item.user-name }} GitHub page">
+					<img 	class="contributor-picture"
+							src="https://github.com/{{ item.user-name }}.png"
+							alt="GitHub profile picture of
+								{{ item.user-name }}">
+				</a>
+			</div>
+		{% endfor %}
+	</div>
+
+	<a	class="link blue-link button-link light-background organisation-link"
+		href="https://github.com/iTowns/itowns/blob/master/CONTRIBUTORS.md"
+  		target="_blank"
+  		title="Go to iTowns contributors list"
+		style="--before-image:
+			url('{{ site.baseurl }}/assets/icons/eye.svg')">
+		See our contributors
+	</a>
+		
+</div>

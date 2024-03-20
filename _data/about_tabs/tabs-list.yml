@@ -1,0 +1,29 @@
+- title: Choosing iTowns
+  anchor: tab-choosing-itowns
+  include: tab.html
+  content: choosing-itowns
+
+- title: Project
+  description:  The project includes designers, developers, and stakeholders,
+                with both regular and occasional contributors. A governance
+                framework defines the project's structure and guarantees the
+                openeness of the project.
+  anchor: tab-project
+  include: tab.html
+  content: project
+
+- title: Sponsors
+  anchor: tab-sponsors
+  include: tab.html
+  content: sponsors
+
+- title: License
+  anchor: tab-license
+  include: tab.html
+  content: license
+
+- title: Roadmap
+  anchor: tab-roadmap
+  include: tab.html
+  content: roadmap
+

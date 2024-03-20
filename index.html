@@ -1,0 +1,96 @@
+---
+permalink: /
+title: "iTowns - Visualising 3D geospatial data"
+layout: default
+stylesheets:
+- /assets/css/pages/home.css
+- /assets/css/includes/header.css
+- /assets/css/includes/footer.css
+- /assets/css/includes/card-example.css
+scripts:
+- /assets/js/header.js
+- /assets/js/example-cards.js
+---
+
+
+<div class="background">
+
+
+{% include header.html class="home-page" %}
+
+
+<div class="home-content-wrapper">
+
+	<div class="home-keywords-wrapper">
+		<p	class="home-keyword"
+	 		style="--before-image:
+				url('{{ site.baseurl }}/assets/icons/opensource.svg')">
+			<span class="first-word">Open</span> source
+		</p>
+		<p	class="home-keyword"
+	 		style="--before-image:
+				url('{{ site.baseurl }}/assets/icons/overlapping-layers.svg')">
+			<span class="first-word">Multiple</span> format support
+		</p>
+		<p	class="home-keyword"
+	 		style="--before-image:
+				url('{{ site.baseurl }}/assets/icons/overlapping-pictures.svg')">
+			<span class="first-word">Multiple</span> use-case
+		</p>
+	</div>
+
+	<section class="home-section">
+
+		<div class="home-call-to-action">
+			<a	class="link button-link green-link full-button-link"
+	  			href="{{ site.baseurl }}/about"
+	  			title="About itowns"
+				style="--before-image:
+					url('{{ site.baseurl }}/assets/icons/about.svg')">
+				About iTowns
+			</a>
+			<a	class="link button-link orange-link"
+	  			id="link-start-project"
+				href="{{ site.baseurl }}/page-not-ready"
+	  			title="Start project"
+				style="--before-image:
+					url('{{ site.baseurl }}/assets/icons/code.svg')">
+				Start a new project
+			</a>
+			<p class="home-call-to-action-text">
+				iTowns is an open-source framework designed for the efficient
+				visualization, navigation, and interaction with 2D and 3D
+				geospatial data on the web.
+			</p>
+			<p class="home-call-to-action-text">
+				It empowers users in creating their own customized 3D geographic
+				applications effortlessly.
+			</p>
+		</div>
+
+		<div class="home-example-card-wrapper" id="card">
+			<button class="arrow-button" id="previous-button">
+				<img src="{{ site.baseurl }}/assets/icons/arrow-left.svg">
+			</button>
+
+			{% for item in site.data.example-cards %}
+				{% include	card-example.html
+							content=item
+							class="home-example-card" %}
+			{% endfor %}
+
+			<button class="arrow-button" id="next-button">
+				<img src="{{ site.baseurl }}/assets/icons/arrow-right.svg">
+			</button>
+		</div>
+
+	</section>
+
+</div>
+
+
+{% include footer.html class="home-page" %}
+
+
+</div>
+

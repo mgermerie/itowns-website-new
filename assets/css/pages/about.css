@@ -1,0 +1,270 @@
+/* -------------------- About subheader ------------------------------------- */
+
+.about-subheader {
+	padding: 60px var(--horizontal-padding-desktop);
+
+	background-color: var(--color-light-gray);
+
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+	justify-content: center;
+
+	color: var(--color-blue);
+}
+
+.about-subheader h3 {
+	margin: 0;
+	padding: 0 16px;
+
+	background-color: var(--color-orange);
+
+	align-items: center;
+	display: flex;
+	flex-shrink: 0;
+	justify-content: center;
+
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 60px;
+	text-transform: uppercase;
+}
+
+.about-description-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.about-subheader p {
+	margin: 0;
+
+	font-size: 20px;
+}
+
+.about-subheader p u {
+	text-underline-offset: 4px;
+}
+
+
+
+
+/* -------------------- Tabs bar -------------------------------------------- */
+
+.tabs-bar {
+	border-bottom: 1px solid var(--color-blue);
+	margin: 0;
+	padding: 0 var(--horizontal-padding-desktop);
+
+	background-color: var(--color-light-gray);
+
+	display: flex;
+	gap: 8px;
+}
+
+.tabs-bar li {
+	list-style: none;
+}
+
+.tab-bar-link {
+	margin: 0;
+
+	justify-content: space-between !important;
+}
+
+.tab-bar-link::before, .tab-bar-link::after {
+	display: none !important;
+}
+
+@media (min-width: 1101px) {
+	.tab-bar-link {
+		border-bottom: none !important;
+		border-radius: 15px 15px 0 0 !important;
+
+		font-size: 16px !important;
+	}
+}
+
+
+
+
+/* -------------------- Tab ------------------------------------------------- */
+
+.tab {
+	max-height: 0;
+	margin-bottom: auto;
+
+	opacity: 0;
+	transition: opacity .3s, visibility .3s;
+	visibility: hidden;
+
+	overflow: hidden;
+}
+
+.tab.visible {
+	max-height: unset;
+
+	opacity: 1;
+	transition: opacity .3s, visibility .3s;
+	visibility: inherit;
+}
+
+
+
+
+/* -------------------- Specificities for individual tabs ------------------- */
+
+#wrapper-tab-sponsors .card .card-link[style*='--after-image']::after,
+#wrapper-tab-license .card .card-link[style*='--after-image']::after {
+	height: 20px;
+	width: 20px;
+
+	background-size: 20px 20px;
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/* -------------------- Responsivity ---------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+
+
+
+@media (max-width: 1200px) {
+
+
+	.about-subheader {
+		padding: 60px var(--horizontal-padding-tablet);
+	}
+
+	.tabs-bar {
+		padding: 0 var(--horizontal-padding-tablet);
+	}
+
+
+}
+
+
+
+
+/* -------------------- Tablet layout --------------------------------------- */
+
+@media (max-width: 1100px) {
+
+
+	/* -------------------- About subheader --------------------------------- */
+
+	.about-subheader {
+		padding: 24px var(--horizontal-padding-tablet);
+
+		align-items: center;
+		flex-direction: row;
+	}
+
+	.about-subheader h3 {
+		font-size: 18px;
+	}
+
+	.about-description-wrapper {
+		gap: 8px;
+	}
+
+	.about-subheader p {
+		font-size: 18px;
+	}
+
+
+	/* -------------------- Tabs bar ---------------------------------------- */
+
+	.tabs-bar {
+		padding: 0;
+		padding-bottom: 8px;
+
+		flex-direction: column;
+	}
+
+	.tabs-bar.collapsed {
+		max-height: 45px;
+
+		margin-bottom: -1px;
+		max-height: 54px;
+		padding: 0;
+	}
+
+	.tabs-bar li:has(.tab-bar-link.visible) {
+		order: -1;
+	}
+
+	.tab-bar-link:not(.visible) {
+		border-radius: 10px;
+		margin: 0 var(--horizontal-padding-tablet);
+		padding: 8px;
+
+		font-size: 16px;
+	}
+
+	.tab-bar-link.visible {
+		border-left: none;
+		border-radius: 0;
+		border-right: none;
+	}
+
+	.tab-bar-link.visible::before,
+	.tab-bar-link.visible::after {
+		height: 20px;
+		width: 20px;
+
+		background-size: 20px 20px;
+
+		display: flex !important;
+	}
+
+	.tabs-bar.collapsed .tab-bar-link.visible::after {
+		content: var(--after-image-arrow-down);
+	}
+
+	.tabs-bar:not(.collapsed) .tab-bar-link.visible::after {
+		content: var(--after-image-arrow-up);
+	}
+
+	.tabs-bar.collapsed .tab-bar-link:not(.visible) {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.tabs-bar:not(.collapsed) .tab-bar-link:not(.visible) {
+		opacity: 1;
+		transition: opacity .3s, visibility .3s;
+		visibility: inherit;
+	}
+
+
+}
+
+
+
+
+/* -------------------- Mobile layout --------------------------------------- */
+
+@media (max-width: 750px) {
+
+
+	.about-subheader {
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.about-subheader h3 {
+		align-self: stretch
+	}
+
+	.about-description-wrapper {
+		gap: 16px;
+	}
+
+
+}
+

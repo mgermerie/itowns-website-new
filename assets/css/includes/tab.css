@@ -1,0 +1,221 @@
+/* -------------------- Tabs wrapper ---------------------------------------- */
+
+.tab-content-wrapper {
+	padding: 60px var(--horizontal-padding-desktop);
+
+	background-color: #FFFFFF;
+
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+}
+
+
+
+
+/* -------------------- Tabs header ----------------------------------------- */
+
+.tab-header {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.tab-title {
+	margin: 0;
+
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 43px;
+}
+
+.tab-description {
+	margin: 0;
+
+	font-size: 18px;
+}
+
+.tab-navigation {
+	align-self: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+}
+
+.tab-navigation-link {
+	height: 30px;
+
+	gap: 16px;
+
+	font-size: 18px;
+}
+
+
+
+
+/* -------------------- Tabs section ---------------------------------------- */
+
+.tab-section {
+	padding: 0 32px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.tab-section-title {
+	margin: 0;
+
+	align-items: center;
+	display: flex;
+	gap: 16px;
+
+	color: var(--color-dark-gray);
+	font-size: 32px;
+	font-weight: 700;
+}
+
+.tab-section-title[style*='--before-image']::before {
+	height: 50px;
+	width: 50px;
+
+	content: "";
+	background-image: var(--before-image);
+	background-size: 50px 50px;
+
+	display: flex;
+
+	filter: invert(18%) sepia(3%) saturate(7%) hue-rotate(13deg)
+			brightness(100%) contrast(84%);
+}
+
+.tab-section-subtitle {
+	margin: 0;
+	margin-top: -8px;
+
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.tab-section-description {
+	margin: 0;
+	margin-top: -24px;
+
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.tab-section-cards-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+	justify-content: space-between;
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/* -------------------- Responsivity ---------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+
+
+
+@media (max-width: 1400px) {
+	.tab-navigation-link::before {
+		display: none !important;
+	}
+}
+
+
+
+
+/* -------------------- Tablet layout --------------------------------------- */
+
+@media (max-width: 1200px) {
+
+
+	/* -------------------- Tabs wrapper ------------------------------------ */
+
+
+	.tab-content-wrapper {
+		padding: 40px var(--horizontal-padding-tablet);
+
+		gap: 40px;
+	}
+
+
+
+
+	/* -------------------- Tabs header ------------------------------------- */
+
+	.tab-header {
+		gap: 16px;
+	}
+
+	.tab-title {
+		font-size: 32px;
+	}
+
+	.tab-navigation-link {
+		font-size: initial;
+	}
+
+
+
+
+	/* -------------------- Tabs section ------------------------------------ */
+
+	.tab-section {
+		padding: 0;
+
+		gap: 32px;
+	}
+
+	.tab-section-title {
+		font-size: 28px;
+	}
+
+	.tab-section-title[style*='--before-image']::before {
+		height: 40px;
+		width: 40px;
+
+		background-size: 40px 40px;
+	}
+
+	.tab-section-subtitle {
+		margin-top: 0;
+		font-size: 20px;
+	}
+
+	.tab-section-description {
+		margin-top: -16px;
+	}
+
+	.tab-section-cards-wrapper {
+		flex-direction: column;
+		gap: 32px;
+	}
+
+
+}
+
+
+
+
+/* -------------------- Mobile layout --------------------------------------- */
+
+@media (max-width: 750px) {
+
+
+	.tab-section-title {
+		font-size: 24px;
+	}
+
+	.tab-section-subtitle {
+		font-size: 18px;
+	}
+
+}

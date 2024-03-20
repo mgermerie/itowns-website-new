@@ -1,0 +1,53 @@
+- title: Key stakeholders
+  anchor: key-stakeholders
+  description:
+    - paragraph: "Sponsors ensure the project's sustainability by providing
+                  human resources and support. Current sponsors are :"
+  cards:
+
+    - title: French National Geographic Institude
+      image: /assets/images/logo-ign.png
+      text:
+        - paragraph: "The original authors of  iTowns, through their research
+                      labs. iTowns is used as the foundation  for building the
+                      3D component of geoservices, alongside various
+                      demonstrators showcasing data produced by IGN."
+      link:
+        afterText: true;
+        target: "http://www.ign.fr/"
+        text: Website
+        icon: /assets/icons/external-link.svg
+
+    - title: Ciril Group
+      image: /assets/images/logo-ciril.png
+      text:
+        - paragraph: "A software publisher and a Cloud hosting service provider.
+                      Their  Business Geografic division leverages iTowns to
+                      build the 3D component  of the GEO Software GIS."
+      link:
+        afterText: true;
+        target: "http://www.cirilgroup.com/fr/"
+        text: Website
+        icon: /assets/icons/external-link.svg
+
+
+- title: Recurrent contributors
+  anchor: recurrent-contributors
+  cards:
+
+    - title: SOGELINK
+      image: /assets/images/logo-sogelink.png
+      link:
+        afterText: true;
+        target: "http://www.sogelink.com/"
+        text: Website
+        icon: /assets/icons/external-link.svg
+
+    - title: LIRIS
+      image: /assets/images/logo-liris.png
+      link:
+        afterText: true;
+        target: "http://www.liris.cnrs.fr/"
+        text: Website
+        icon: /assets/icons/external-link.svg
+

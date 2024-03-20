@@ -1,0 +1,31 @@
+<h2 class="tab-section-title">
+	{{ include.content.title }}
+</h2>
+
+<div class="third-party-list-wrapper">
+	{% for item in include.content.dependencies %}
+		<div class="third-party-wrapper">
+			<h3 class="tab-section-subtitle third-party-name">
+				{{ item.name }}
+			</h3>
+			<p	class="tab-section-description license-description
+						third-party-license">
+				{{ item.license }}
+			</p>
+			{% if item.link %}
+				<p	class="tab-section-description license-description
+							third-party-license">
+					<a	class="license-link"
+						href="{{ item.link.target }}"
+						target="_blank"
+	  					title="Go to license file"
+						style="--after-image:
+							url('{{ site.baseurl }}/assets/icons/external-link.svg')">
+						{{ item.link.text }}
+					</a>
+				</p>
+			{% endif %}
+		</div>
+	{% endfor %}
+</div>
+

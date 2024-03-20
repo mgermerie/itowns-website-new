@@ -1,0 +1,26 @@
+<div class="example-card {{ include.class }}">
+
+	<h1 class="example-card-title">
+		{{ include.content.title }}
+	</h1>
+
+	<div class="example-card-picture-wrapper">
+		<img 	class="example-card-picture"
+				src="{{ site.baseurl }}/{{ include.content.image-url }}"
+	   			alt="Picture of the example">
+	</div>
+
+	<p class="example-card-description">
+		{{ include.content.description }}
+	</p>
+
+	<a	class="link blue-link light-background example-card-link"
+		href="{{ include.content.link }}"
+  		target="_blank"
+  		title="Link to the example"
+		style="--after-image:
+			url('{{ site.baseurl }}/assets/icons/eye.svg')">
+		Test the example
+	</a>
+
+</div>

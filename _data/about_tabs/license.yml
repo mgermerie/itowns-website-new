@@ -1,0 +1,57 @@
+- title: iTowns
+  anchor: itowns-license
+  custom-include: license-itowns.html
+  description:
+    - paragraph: "These are permissive licence. You have permission to use the
+                  code, to modify it, publish it, sell it, make something with
+                  it and sell it."
+    - paragraph: "What you just need to do is to keep the license and copyright
+                  text from the code when you share it."
+    - paragraph: "Full modification and redistribution right Citation
+                  requirement Community rules Foss Licence (MIT)."
+  cards:
+    - title: "MIT"
+      link:
+        afterText: true;
+        target: "https://opensource.org/license/mit"
+        text: "License text"
+        icon: /assets/icons/external-link.svg
+
+    - title: "CeCILL B"
+      link:
+        afterText: true;
+        target: "https://cecill.info/"
+        text: "License text"
+        icon: /assets/icons/external-link.svg
+
+- title: "Third-Party code"
+  anchor: third-party-license
+  custom-include: license-third-party.html
+  dependencies:
+    - name: "Three"
+      license: "MIT"
+      link:
+        target: "https://github.com/mrdoob/three.js/blob/dev/LICENSE"
+        text: "ThreeJS license"
+    - name: "proj4"
+      license: "MIT"
+    - name: "@mapbox/mapbox-gl-style-spec"
+      license: "ISC"
+    - name: "@mapbox/vector-tile"
+      license: "BSD-3-Clause"
+    - name: "@tmcw/togeojson"
+      license: "BSD-3-Clause"
+    - name: "@tweenjs/tween.js"
+      license: "MIT"
+    - name: "earcut"
+      license: "ISC"
+    - name: "js-priority-queue"
+      license: "PriorityQueue is published under a Public Domain status."
+      link:
+        target: "https://github.com/adamhooper/js-priority-queue/blob/master/LICENSE.md"
+        text: "js-priority-queue license"
+    - name: "pbf"
+      license: "BSD-3-Clause"
+    - name: "shpjs"
+      license: "MIT"
+

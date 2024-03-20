@@ -1,0 +1,30 @@
+<h2 class="tab-section-title"
+	{% if include.content.icon %}
+		style="--before-image:
+			url('{{ site.baseurl }}/{{ include.content.icon }}')"
+	{% endif %}
+>
+	{{ include.content.title }}
+</h2>
+
+{% if include.content.subtitle %}
+	<h3 class="tab-section-subtitle">
+		{{ include.content.subtitle }}
+	</h3>
+{% endif %}
+
+{% if include.content.description %}
+	{% for item in item.description %}
+		<p class="tab-section-description">
+			{{ item.paragraph }}
+		</p>
+	{% endfor %}
+{% endif %}
+
+<div class="tab-section-cards-wrapper">
+
+	{% for card in include.content.cards %}
+		{% include card-about.html content=card %}
+	{% endfor %}
+
+</div>

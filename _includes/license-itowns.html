@@ -1,0 +1,26 @@
+<h2 class="tab-section-title">
+	{{ include.content.title }}
+</h2>
+
+<div class="tab-section-cards-wrapper itowns-license-cards-wrapper">
+	{% for card in include.content.cards %}
+		{% include card-about.html content=card %}
+	{% endfor %}
+</div>
+
+{% for item in include.content.description %}
+	<p class="tab-section-description license-description itowns-license">
+		{{ item.paragraph }}
+	</p>
+{% endfor %}
+
+<p class="tab-section-description license-description itowns-license">
+	<a	class="license-link"
+		href="https://github.com/iTowns/itowns/blob/master/LICENSE.md"
+		target="_blank"
+  		title="Go to itowns License.md file"
+		style="--after-image:
+			url('{{ site.baseurl }}/assets/icons/external-link.svg')">
+	 	Link to iTowns license.md</a>
+</p>
+

@@ -1,0 +1,334 @@
+/* -------------------- Background  ----------------------------------------- */
+
+.background {
+	min-height: 100vh;
+
+	background: linear-gradient(
+		128deg,
+		#0D2237 79.58%,
+		rgba(255, 142, 43, 0.89) 107.69%
+	);
+
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+
+/* -------------------- Content wrapper ------------------------------------ */
+
+.home-content-wrapper {
+	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	gap: 40px;
+
+	color: var(--color-white);
+}
+
+
+
+
+/* -------------------- Keywords wrapper ------------------------------------ */
+
+.home-keywords-wrapper {
+	border-bottom: 2px solid var(--color-white);
+	border-top: 2px solid var(--color-white);
+	margin: -2px 0;
+	padding: 16px var(--horizontal-padding-desktop);
+
+	background: linear-gradient(
+		270deg,
+		#2C5E5F -9.15%,
+		#0D2237 31.72%,
+		#0D2237 61.9%,
+		#2C5E5F 103.4%
+	);
+
+	display: flex;
+	justify-content: center;
+	gap: 120px;
+}
+
+
+
+
+/* -------------------- Keywords -------------------------------------------- */
+
+.home-keyword {
+	margin: 0;
+
+	align-items: center;
+	display: flex;
+	gap: 12px;
+
+	color: var(--color-white);
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+.home-keyword span {
+	color: var(--color-green);
+}
+
+.home-keyword::before {
+	height: 30px;
+	width: 30px;
+
+	content: var(--before-image);
+
+	align-items: center;
+	display: flex;
+	justify-content: center;
+
+	filter: var(--svg-filter-green);
+}
+
+
+
+
+/* -------------------- Content section ------------------------------------- */
+
+.home-section {
+	padding: 0 var(--horizontal-padding-desktop);
+
+	align-items: center;
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+	gap: 80px;
+}
+
+
+
+
+/* -------------------- Call to action -------------------------------------- */
+
+.home-call-to-action {
+
+	display: flex;
+	flex: 0 0 396px;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.home-call-to-action-text {
+	margin: 0;
+
+	font-size: 20px;
+	font-weight: 500;
+	text-align: center;
+}
+
+
+
+
+/* -------------------- Card ------------------------------------------------ */
+
+/* Container */
+
+.home-example-card-wrapper {
+	border: 2px solid var(--color-white);
+	border-radius: 20px;
+	padding: 24px 0;
+
+	background-color: white;
+
+	align-items: center;
+	display: flex;
+	flex: 1 1 auto;
+}
+
+
+/* Buttons */
+
+.arrow-button {
+	border: none;
+	box-sizing: content-box;
+	height: 30px;
+	width: 40px;
+
+	background: none;
+
+	cursor: pointer;
+}
+
+.arrow-button:hover {
+	background-color: var(--links-hover-color);
+}
+
+
+/* Example wrapper */
+
+.home-example-card-wrapper .example-card {
+	max-height: 0;
+	max-width: 0;
+
+	opacity: 0;
+	transition: opacity .3s, visibility .3s;
+	visibility: hidden;
+}
+
+.home-example-card-wrapper .example-card.visible {
+	max-height: unset;
+	max-width: unset;
+
+	opacity: 1;
+	transition: opacity .3s, visibility .3s;
+	visibility: inherit;
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/* -------------------- Responsivity ---------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+
+
+
+@media (max-width: 1200px) {
+
+
+	.home-keywords-wrapper {
+		padding: 16px var(--horizontal-padding-tablet);
+	}
+
+	.home-section {
+		padding: 0 var(--horizontal-padding-tablet);
+	}
+
+
+}
+
+
+
+
+/* -------------------- Tablet layout --------------------------------------- */
+
+@media (max-width: 1100px) {
+
+
+	/* -------------------- Content wrapper --------------------------------- */
+	.home-content-wrapper {
+		margin: 0;
+	}
+
+
+	/* -------------------- Keywords wrapper -------------------------------- */
+
+	.home-keywords-wrapper {
+		padding: 32px var(--horizontal-padding-tablet);
+
+		gap: 0;
+		justify-content: space-between;
+	}
+
+
+	/* -------------------- Keywords ---------------------------------------- */
+
+	.home-keyword {
+		font-size: 16px;
+	}
+
+
+	/* -------------------- Content section --------------------------------- */
+
+	.home-section {
+		flex-direction: column;
+		gap: 40px;
+	}
+
+
+	/* -------------------- Call to action ---------------------------------- */
+
+	.home-call-to-action {
+		align-self: stretch;
+		flex-basis: auto;
+	}
+
+	#link-start-project {
+		display: none;
+	}
+
+
+}
+
+
+
+
+/* -------------------- Mobile layout --------------------------------------- */
+
+@media (max-width: 750px) {
+
+
+	/* -------------------- Content wrapper --------------------------------- */
+
+	.home-content-wrapper {
+		margin-bottom: 28px;
+		margin-top: 16px;
+
+		gap: 56px;
+	}
+
+
+	/* -------------------- Keywords wrapper -------------------------------- */
+
+	.home-keywords-wrapper {
+		padding: 32px;
+
+		align-items: center;
+		flex-direction: column;
+		gap: 24px;
+		justify-content: center;
+		order: 1;
+	}
+
+	.home-keyword {
+		font-size: 18px;
+	}
+
+
+	/* -------------------- Content section --------------------------------- */
+
+	.home-section {
+		padding: 0;
+	}
+
+
+	/* -------------------- Call to action ---------------------------------- */
+
+	.home-call-to-action {
+		padding: 16px 8px;
+
+		gap: 16px;
+	}
+
+	.home-call-to-action .link {
+		margin-top: 12px;
+
+		order: 1;
+	}
+
+
+	/* -------------------- Card -------------------------------------------- */
+
+	.home-example-card-wrapper {
+		border: none;
+		border-radius: 0;
+		border-top: 2px solid var(--color-white);
+	}
+
+	.home-example-card-wrapper .arrow-button {
+		display: none;
+	}
+
+
+}
+

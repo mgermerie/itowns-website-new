@@ -1,0 +1,14 @@
+- name: Home
+  link: /
+
+- name: About iTowns
+  link: /about
+
+- name: Getting started
+  link: /page-not-ready
+
+- name: Documentation
+  link: /page-not-ready
+
+- name: Community
+  link: /page-not-ready

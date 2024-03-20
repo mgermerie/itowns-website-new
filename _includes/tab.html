@@ -1,0 +1,53 @@
+<div class="tab-content-wrapper">
+
+	<div class="tab-header">
+
+		<h1 class="tab-title">
+			{{ include.title }}
+		</h1>
+
+		<p class="tab-description">
+			{{ include.description }}
+		</p>
+		
+		<nav class="tab-navigation">
+			{% for item in include.content %}
+				<a	class="link gray-link light-background
+						tab-navigation-link"
+					href="#{{ include.base_anchor }}_{{ item.anchor }}"
+					title="{{ item.title }}"
+					{% if item.icon %}
+						style="--before-image:
+							url('{{ site.baseurl }}/{{ item.icon }}')"
+					{% endif %}
+					>
+					{{ item.title }}
+				</a>
+			{% endfor %}
+		</nav>
+
+	</div>
+
+	{% for item in include.content %}
+		<section	class="tab-section"
+					id="{{include.base_anchor }}_{{ item.anchor }}">
+
+			{% if item.custom-include %}
+
+				{% include {{ item.custom-include }}
+					content=item
+				%}
+
+			{% else %}
+
+				{% include default-tab-section.html
+					content=item
+				%}
+
+			{% endif %}
+
+		</section>
+	{% endfor %}
+
+</div>
+

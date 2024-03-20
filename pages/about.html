@@ -1,0 +1,76 @@
+---
+permalink: /about
+title: "iTowns - About iTowns"
+layout: default
+stylesheets:
+- /assets/css/pages/about.css
+- /assets/css/includes/header.css
+- /assets/css/includes/footer.css
+- /assets/css/includes/card-about.css
+- /assets/css/includes/tab.css
+- /assets/css/includes/organisation-chart.css
+- /assets/css/includes/license.css
+scripts:
+- /assets/js/header.js
+- /assets/js/tabs.js
+---
+
+
+{% include header.html %}
+
+
+<div class="about-subheader">
+	<h3>About iTowns</h3>
+	<div class="about-description-wrapper">
+		<p>
+			iTowns is an <u>open-source framework</u> designed for the
+			efficient <u>visualization</u>, <u>navigation</u>, and
+			interaction with 2D and 3D <u>geospatial data</u> on the web.
+		</p>
+		<p>
+			It <u>empowers</u> users in creating their own <u>customized</u>
+			3D geographic applications effortlessly.
+		</p>
+	</div>
+</div>
+
+<ul class="tabs-bar collapsed" id="tab-bar">
+	{% for item in site.data.about_tabs.tabs-list %}
+	<li>
+		<a	class="link button-link blue-link full-button-link tab-bar-link"
+	 		id="link-{{ item.anchor }}"
+			data-anchor="{{ item.anchor }}"
+	 		href="#{{ item.anchor }}"
+	 		title="{{ item.title }}"
+	 		style="
+				--before-image:
+					url('{{ site.baseurl }}/assets/icons/tab-bar.svg');
+				--after-image-arrow-down:
+					url('{{ site.baseurl }}/assets/icons/arrow-down.svg');
+				--after-image-arrow-up:
+					url('{{ site.baseurl }}/assets/icons/arrow-up.svg');">
+			{{ item.title }}
+		</a>
+	</li>
+	{% endfor %}
+</ul>
+
+
+{% for item in site.data.about_tabs.tabs-list %}
+<div class="tab" id="wrapper-{{ item.anchor }}">
+	{% capture tab_title %}{{ item.title }}{% endcapture %}
+	{% capture tab_description %}{{ item.description }}{% endcapture %}
+	{% capture tab_anchor %}{{ item.anchor }}{% endcapture %}
+	{% assign tab_content = site.data.about_tabs[item.content] %}
+	{% include {{ item.include }}
+		title=tab_title
+		description=tab_description
+		base_anchor=tab_anchor
+		content=tab_content
+	%}
+</div>
+{% endfor %}
+
+
+{% include footer.html %}
+
